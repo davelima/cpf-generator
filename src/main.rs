@@ -19,6 +19,10 @@ fn main() {
     result.push_str(new_n.to_string().as_str());
     result.push_str(&second_vd.to_string());
 
+    if result.len() < 11 {
+        result = format!("{:0>11}", result);
+    }
+
     println!("{}", result);
 }
 
